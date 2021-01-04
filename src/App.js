@@ -65,8 +65,6 @@ const Usurvey = () => {
 	}, []);
 
 	useEffect(() => {
-		console.log(firstName, lastName);
-
 		firebase
 			.database()
 			.ref(`Newdata/${uid}`)
@@ -121,6 +119,9 @@ const Usurvey = () => {
 					<h2>You have {sec} seconds</h2>
 				</>
 			)}
+			<h3>
+				Created by <a>https://github.com/rootnarayan</a>
+			</h3>
 		</div>
 	);
 };
