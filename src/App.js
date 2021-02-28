@@ -14,7 +14,8 @@ const config = {
 firebase.initializeApp(config);
 var regExp = /\(([^)]+)\)/;
 const mat = (i) => {
-	return regExp.exec(i)[1];
+	// return regExp.exec(i)[1];
+	return i;
 };
 const Usurvey = () => {
 	const [uid, updateuid] = useState(uuidv4());
@@ -51,8 +52,8 @@ const Usurvey = () => {
 				updateLoading(false);
 				id = setTimeout(() => {
 					updateRedirect(true);
-				}, 180000);
-				updateSec(180);
+				}, 30000);
+				updateSec(30);
 
 				bd = setInterval(() => {
 					updateSec((p) => p - 1);
@@ -121,8 +122,8 @@ const Usurvey = () => {
 			)}
 			<h3>
 				Created by
-				<a href='https://github.com/rootnarayan'>
-					https://github.com/rootnarayan
+				<a href='https://github.com/bitoffabyte'>
+					https://github.com/bitoffabyte
 				</a>
 			</h3>
 		</div>
